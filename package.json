@@ -1,0 +1,15 @@
+{
+  "name": "seed-random",
+  "version": "1.0.1",
+  "description": "Generate random numbers with a seed, useful for reproducible tests",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ForbesLindesay/seed-random.git"
+  },
+  "author": "",
+  "license": "MIT"
+}
