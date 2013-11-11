@@ -11,12 +11,17 @@ var fakeRandomA = seed('foo');
 var fakeRandomB = seed('foo');
 assert(fakeRandomA() == fakeRandomB());
 
-seed('foo', true);//over-ride global Math.random
+var fakeRandomC = seed('foo', {entropy: true});
+var fakeRandomD = seed('foo', {entropy: true});
+assert(fakeRandomC() != fakeRandomD());
+
+
+seed('foo', {global: true});//over-ride global Math.random
 var numA = Math.random();
-seed('foo', true);
+seed('foo', {global: true});
 var numB = Math.random();
 assert(numA == numB);//always true
 
-seed(undefined, true);//reset to default Math.random
+seed.resetGlobal();//reset to default Math.random
 
 console.log('All Tests Passed');
