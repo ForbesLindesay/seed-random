@@ -1,6 +1,6 @@
 {
   "name": "seed-random",
-  "version": "1.0.1",
+  "version": "2.2.0",
   "description": "Generate random numbers with a seed, useful for reproducible tests",
   "main": "index.js",
   "scripts": {
