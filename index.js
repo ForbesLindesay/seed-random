@@ -47,7 +47,7 @@ module.exports = function(seed, options) {
   // This function returns a random double in [0, 1) that contains
   // randomness in every bit of the mantissa of the IEEE 754 value.
 
-  return function() {         // Closure to return a random double:
+  var ret = function() {         // Closure to return a random double:
     var n = arc4.g(chunks),             // Start with a numerator n < 2 ^ 48
         d = startdenom,                 //   and denominator d = 2 ^ 48.
         x = 0;                          //   and no 'extra last byte'.
@@ -63,6 +63,23 @@ module.exports = function(seed, options) {
     }
     return (n + x) / d;                 // Form the number within [0, 1).
   };
+  ret.get_state = function(){
+    return {
+      i : arc4.i,
+      j : arc4.j,
+      S : arc4.S.slice()
+    };
+  }
+  ret.set_state = function(state){
+    arc4.i = state.i;
+    arc4.j = state.j;
+    // arc4.S = state.S.slice(); // fast but memory non friendly
+    for(var i=0,_ref=state.S,len=_ref.length;i<len;i++) {
+      arc4.S[i] = _ref[i];
+    }
+  }
+  
+  return ret;
 };
 
 module.exports.resetGlobal = function () {
