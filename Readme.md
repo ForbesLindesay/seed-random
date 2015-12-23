@@ -4,8 +4,8 @@ Generate random numbers with a seed, useful for reproducible tests
 
 
 [![build status](https://secure.travis-ci.org/ForbesLindesay/seed-random.png?branch=master)](http://travis-ci.org/ForbesLindesay/seed-random)
-[![Dependency Status](https://gemnasium.com/ForbesLindesay/seed-random.png)](https://gemnasium.com/ForbesLindesay/seed-random)
-[![NPM version](https://badge.fury.io/js/seed-random.png)](http://badge.fury.io/js/seed-random)
+[![Dependency Status](https://david-dm.org/ForbesLindesay/seed-random.png)](https://gemnasium.com/ForbesLindesay/seed-random)
+[![NPM version](https://img.shields.io/npm/v/seed-random.svg)](https://www.npmjs.com/package/seed-random)
 
 ## Installation
 
