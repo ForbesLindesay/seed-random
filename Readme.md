@@ -1,5 +1,7 @@
 # seed-random
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/ForbesLindesay/seed-random.svg)](https://greenkeeper.io/)
+
 Generate random numbers with a seed, useful for reproducible tests
 
 
